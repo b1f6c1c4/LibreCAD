@@ -55,6 +55,7 @@ QG_SnapToolBar::QG_SnapToolBar(QWidget* parent, QG_ActionHandler* ah, LC_ActionG
     connect(snapFree, SIGNAL(triggered()), this, SLOT(actionTriggered()));
     this->addAction(snapFree);
     snapGrid = new QAction(QIcon(":/icons/snap_grid.svg"), tr("Snap on grid"), agm->snap);
+    snapGrid->setShortcut(QKeySequence("F7"));
     snapGrid->setObjectName("SnapGrid");
     snapGrid->setCheckable(true);
     connect(snapGrid, SIGNAL(triggered()), this, SLOT(actionTriggered()));
