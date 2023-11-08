@@ -106,6 +106,7 @@ QG_SnapToolBar::QG_SnapToolBar(QWidget* parent, QG_ActionHandler* ah, LC_ActionG
 
     restrictOrthogonal = new QAction(QIcon(":/icons/restr_ortho.svg"),
                                    tr("Restrict Orthogonal"), agm->restriction);
+    restrictOrthogonal->setShortcut(QKeySequence("F8"));
     restrictOrthogonal->setObjectName("RestrictOrthogonal");
     restrictOrthogonal->setCheckable(true);
     connect(restrictOrthogonal, SIGNAL(triggered(bool)), this,
