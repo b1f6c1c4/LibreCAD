@@ -49,6 +49,7 @@ QG_SnapToolBar::QG_SnapToolBar(QWidget* parent, QG_ActionHandler* ah, LC_ActionG
     addAction(action);
 
     snapFree = new QAction(QIcon(":/icons/snap_free.svg"), tr("Free Snap"), agm->snap_extras);
+    snapFree->setShortcut(QKeySequence("F9"));
     snapFree->setCheckable(true);
     snapFree->setObjectName("SnapFree");
     connect(snapFree, SIGNAL(triggered()), this, SLOT(actionTriggered()));
